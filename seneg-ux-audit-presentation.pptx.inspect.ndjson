@@ -1,0 +1,146 @@
+{"kind":"deck","id":"pr/j8n9h8","name":"Deck"}
+{"kind":"layout","layoutId":"a59ba6cd-82c2-4531-ade3-f173a82cb253","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"c5c87dd7-f5e7-4d19-b9ad-479717ae414e","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/fdfzjd","slide":1,"title":"UX аудит сайта","textShapes":6}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":1,"text":"UX аудит сайта","textPreview":"UX аудит сайта","textChars":14,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"shape","id":"sh/t83itgfm","slide":1,"bbox":[44,58,1190,1]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":1,"text":"Сайт «Сенеж» создаёт доверие брендом, но теряет конверсию на первом касании","textPreview":"Сайт «Сенеж» создаёт доверие брендом, но теряет конверсию на первом касании","textChars":75,"textLines":1,"bbox":[44,95,970,215]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":1,"text":"Презентация по итогам UX-, conversion- и accessibility-проверки сайта seneg.ru","textPreview":"Презентация по итогам UX-, conversion- и accessibility-проверки сайта seneg.ru","textChars":78,"textLines":1,"bbox":[48,328,760,80]}
+{"kind":"shape","id":"sh/m58z25kb","slide":1,"bbox":[44,500,360,132]}
+{"kind":"shape","id":"sh/twra5gbq","slide":1,"bbox":[430,500,360,132]}
+{"kind":"shape","id":"sh/4byhgn29","slide":1,"bbox":[816,500,418,132]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":1,"text":"Оценка\n4.8 / 10","textPreview":"Оценка | 4.8 / 10","textChars":15,"textLines":2,"bbox":[68,525,180,88]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":1,"text":"Приоритетные проблемы\n1 critical, 5 major, 2 minor","textPreview":"Приоритетные проблемы | 1 critical, 5 major, 2 minor","textChars":50,"textLines":2,"bbox":[455,528,290,74]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":1,"text":"Главный вывод\nНужно чинить mobile-first опыт, hero и путь к заявке раньше, чем заниматься косметикой","textPreview":"Главный вывод | Нужно чинить mobile-first опыт, hero и путь к заявке раньше, чем заниматься косметикой","textChars":100,"textLines":2,"bbox":[842,520,350,90]}
+{"kind":"notes","id":"nt/fdfzjd","slide":1,"text":""}
+{"kind":"slide","id":"sl/20ovn3","slide":2,"title":"Итог аудита","textShapes":16}
+{"kind":"textbox","id":"sh/q1orytsv","slide":2,"text":"Итог аудита","textPreview":"Итог аудита","textChars":11,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":2,"text":"Проблема не в одном элементе, а в трении по всей воронке первого касания","textPreview":"Проблема не в одном элементе, а в трении по всей воронке первого касания","textChars":72,"textLines":1,"bbox":[44,76,950,90]}
+{"kind":"shape","id":"sh/87ed8bat","slide":2,"bbox":[44,196,360,320]}
+{"kind":"shape","id":"sh/je9cvixc","slide":2,"bbox":[430,196,360,320]}
+{"kind":"shape","id":"sh/qtcj6tov","slide":2,"bbox":[816,196,418,320]}
+{"kind":"textbox","id":"sh/1gvy90je","slide":2,"text":"Что уже работает","textPreview":"Что уже работает","textChars":16,"textLines":1,"bbox":[68,222,220,34]}
+{"kind":"textbox","id":"sh/8z25kb6x","slide":2,"text":"• Контакты заметны и поддерживают базовое доверие","textPreview":"• Контакты заметны и поддерживают базовое доверие","textChars":49,"textLines":1,"bbox":[68,275,300,49.4]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":2,"text":"• Карточки товаров содержат полезную техническую информацию","textPreview":"• Карточки товаров содержат полезную техническую информацию","textChars":59,"textLines":1,"bbox":[68,321.1,300,49.4]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":2,"text":"• Серверная валидация форм и антиспам работают","textPreview":"• Серверная валидация форм и антиспам работают","textChars":46,"textLines":1,"bbox":[68,367.2,300,49.4]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":2,"text":"Что мешает конверсии","textPreview":"Что мешает конверсии","textChars":20,"textLines":1,"bbox":[454,222,250,34]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":2,"text":"• Перегруженный первый экран без одного доминирующего CTA","textPreview":"• Перегруженный первый экран без одного доминирующего CTA","textChars":57,"textLines":1,"bbox":[454,275,300,49.4]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":2,"text":"• Сломанный mobile-first опыт","textPreview":"• Сломанный mobile-first опыт","textChars":29,"textLines":1,"bbox":[454,321.1,300,49.4]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":2,"text":"• Слишком тяжёлые формы первого контакта","textPreview":"• Слишком тяжёлые формы первого контакта","textChars":40,"textLines":1,"bbox":[454,367.2,300,49.4]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":2,"text":"• Слабый коммерческий путь на карточке товара","textPreview":"• Слабый коммерческий путь на карточке товара","textChars":45,"textLines":1,"bbox":[454,413.3,300,49.4]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":2,"text":"Что это значит для бизнеса","textPreview":"Что это значит для бизнеса","textChars":26,"textLines":1,"bbox":[840,222,290,34]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":2,"text":"• Часть мобильного трафика отваливается до осмысленного клика","textPreview":"• Часть мобильного трафика отваливается до осмысленного клика","textChars":61,"textLines":1,"bbox":[840,275,340,49.4]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":2,"text":"• Холодный посетитель дольше разбирается в сайте, чем должен","textPreview":"• Холодный посетитель дольше разбирается в сайте, чем должен","textChars":60,"textLines":1,"bbox":[840,321.1,340,49.4]}
+{"kind":"textbox","id":"sh/0z61032l","slide":2,"text":"• Даже сильный бренд выглядит менее актуальным, чем есть на самом деле","textPreview":"• Даже сильный бренд выглядит менее актуальным, чем есть на самом деле","textChars":70,"textLines":1,"bbox":[840,367.2,340,49.4]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":2,"text":"Приоритет исправлений: сначала mobile и hero, затем формы и путь к покупке, потом визуальная и контентная полировка.","textPreview":"Приоритет исправлений: сначала mobile и hero, затем формы и путь к покупке, потом визуальная и контентная полировка.","textChars":116,"textLines":1,"bbox":[44,566,1180,86]}
+{"kind":"notes","id":"nt/20ovn3","slide":2,"text":""}
+{"kind":"slide","id":"sl/yc1ne8","slide":3,"title":"Пример 1","textShapes":11}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":3,"text":"Пример 1","textPreview":"Пример 1","textChars":8,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/judg7ads","slide":3,"text":"Главная страница перегружает первый экран и не ведёт к одному следующему шагу","textPreview":"Главная страница перегружает первый экран и не ведёт к одному следующему шагу","textChars":77,"textLines":1,"bbox":[44,76,700,100]}
+{"kind":"shape","id":"sh/1orytsvu","slide":3,"bbox":[690,78,544,520]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":3,"text":"Что видно на экране","textPreview":"Что видно на экране","textChars":19,"textLines":1,"bbox":[44,210,240,30]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":3,"text":"• Телефоны, callback-кнопка, каталог, спецпредложения и новости конкурируют одновременно","textPreview":"• Телефоны, callback-кнопка, каталог, спецпредложения и новости конкурируют одновременно","textChars":88,"textLines":1,"bbox":[44,252,560,52]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":3,"text":"• Hero не объясняет одним блоком, что делать новому посетителю","textPreview":"• Hero не объясняет одним блоком, что делать новому посетителю","textChars":62,"textLines":1,"bbox":[44,300,560,52]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":3,"text":"• Главный CTA визуально слабый и теряется среди вторичных маршрутов","textPreview":"• Главный CTA визуально слабый и теряется среди вторичных маршрутов","textChars":67,"textLines":1,"bbox":[44,348,560,52]}
+{"kind":"textbox","id":"sh/cvixczed","slide":3,"text":"Почему это важно","textPreview":"Почему это важно","textChars":16,"textLines":1,"bbox":[44,436,240,30]}
+{"kind":"textbox","id":"sh/m1cfa9w3","slide":3,"text":"• Пользователь тратит внимание на навигацию вместо решения задачи","textPreview":"• Пользователь тратит внимание на навигацию вместо решения задачи","textChars":65,"textLines":1,"bbox":[44,478,560,52]}
+{"kind":"textbox","id":"sh/bm58z25k","slide":3,"text":"• Падает шанс первого клика в коммерчески полезный сценарий","textPreview":"• Падает шанс первого клика в коммерчески полезный сценарий","textChars":59,"textLines":1,"bbox":[44,526,560,52]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":3,"text":"• Сложнее конвертировать холодный трафик из рекламы и поиска","textPreview":"• Сложнее конвертировать холодный трафик из рекламы и поиска","textChars":60,"textLines":1,"bbox":[44,574,560,52]}
+{"kind":"shape","id":"sh/tsvu9kni","slide":3,"bbox":[44,614,1190,58]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":3,"text":"Что менять: собрать первый экран вокруг ценностного предложения, 1 основного CTA и 1–2 вторичных маршрутов","textPreview":"Что менять: собрать первый экран вокруг ценностного предложения, 1 основного CTA и 1–2 вторичных маршрутов","textChars":106,"textLines":1,"bbox":[68,629,1130,30]}
+{"kind":"image","id":"im/fil0rqd4","slide":3,"name":"","geometry":"roundRect","alt":"Главная страница seneg.ru на десктопе","bbox":[690,78,544,520]}
+{"kind":"notes","id":"nt/yc1ne8","slide":3,"text":""}
+{"kind":"slide","id":"sl/4gcmo6","slide":4,"title":"Пример 2","textShapes":11}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":4,"text":"Пример 2","textPreview":"Пример 2","textChars":8,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":4,"text":"Мобильная версия ломает восприятие с первой секунды и напрямую бьёт по отказам","textPreview":"Мобильная версия ломает восприятие с первой секунды и напрямую бьёт по отказам","textChars":78,"textLines":1,"bbox":[44,76,720,92]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":4,"bbox":[44,186,390,530]}
+{"kind":"shape","id":"sh/ixczed8v","slide":4,"bbox":[476,186,758,530]}
+{"kind":"textbox","id":"sh/tovahoza","slide":4,"text":"Наблюдения","textPreview":"Наблюдения","textChars":10,"textLines":1,"bbox":[504,218,200,30]}
+{"kind":"textbox","id":"sh/032lszqt","slide":4,"text":"• Десктопная композиция в хедере почти не перестраивается под narrow viewport","textPreview":"• Десктопная композиция в хедере почти не перестраивается под narrow viewport","textChars":77,"textLines":1,"bbox":[504,262,680,54.6]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":4,"text":"• Плотные списки и мелкие ссылки осложняют чтение и касание","textPreview":"• Плотные списки и мелкие ссылки осложняют чтение и касание","textChars":59,"textLines":1,"bbox":[504,313.9,680,54.6]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":4,"text":"• Контент воспринимается как обрезанный и перегруженный","textPreview":"• Контент воспринимается как обрезанный и перегруженный","textChars":55,"textLines":1,"bbox":[504,365.8,680,54.6]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":4,"text":"Бизнес-эффект","textPreview":"Бизнес-эффект","textChars":13,"textLines":1,"bbox":[504,430,220,30]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":4,"text":"• Растёт bounce rate с мобильных устройств","textPreview":"• Растёт bounce rate с мобильных устройств","textChars":42,"textLines":1,"bbox":[504,474,680,54.6]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":4,"text":"• Падает глубина просмотра до контакта или карточки товара","textPreview":"• Падает глубина просмотра до контакта или карточки товара","textChars":58,"textLines":1,"bbox":[504,525.9,680,54.6]}
+{"kind":"textbox","id":"sh/vahoza1g","slide":4,"text":"• Даже качественный трафик хуже доходит до заявки","textPreview":"• Даже качественный трафик хуже доходит до заявки","textChars":49,"textLines":1,"bbox":[504,577.8,680,54.6]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":4,"text":"Приоритет: пересобрать mobile-first сетку главной и товарных шаблонов раньше визуальной полировки","textPreview":"Приоритет: пересобрать mobile-first сетку главной и товарных шаблонов раньше визуальной полировки","textChars":97,"textLines":1,"bbox":[504,628,680,52]}
+{"kind":"image","id":"im/lwval87e","slide":4,"name":"","geometry":"roundRect","alt":"Мобильный вид главной страницы seneg.ru","bbox":[44,186,390,530]}
+{"kind":"notes","id":"nt/4gcmo6","slide":4,"text":""}
+{"kind":"slide","id":"sl/jt5xmn","slide":5,"title":"Пример 3","textShapes":11}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":5,"text":"Пример 3","textPreview":"Пример 3","textChars":8,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":5,"text":"Карточка товара хорошо объясняет продукт, но слабо доводит до покупки","textPreview":"Карточка товара хорошо объясняет продукт, но слабо доводит до покупки","textChars":69,"textLines":1,"bbox":[44,76,760,90]}
+{"kind":"shape","id":"sh/re1w7mp0","slide":5,"bbox":[44,188,650,462]}
+{"kind":"shape","id":"sh/2t83itgf","slide":5,"bbox":[726,188,508,462]}
+{"kind":"textbox","id":"sh/9knih4by","slide":5,"text":"Что хорошо","textPreview":"Что хорошо","textChars":10,"textLines":1,"bbox":[752,218,200,30]}
+{"kind":"textbox","id":"sh/kzupwb2h","slide":5,"text":"• Есть технические характеристики, назначение и преимущества","textPreview":"• Есть технические характеристики, назначение и преимущества","textChars":60,"textLines":1,"bbox":[752,258,440,49.4]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":5,"text":"• Есть вход в техподдержку и полезные материалы","textPreview":"• Есть вход в техподдержку и полезные материалы","textChars":47,"textLines":1,"bbox":[752,302.1,440,49.4]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":5,"text":"• Контент помогает рациональному выбору","textPreview":"• Контент помогает рациональному выбору","textChars":39,"textLines":1,"bbox":[752,346.2,440,49.4]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":5,"text":"Что мешает конверсии","textPreview":"Что мешает конверсии","textChars":20,"textLines":1,"bbox":[752,395,260,30]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":5,"text":"• Нет короткого buy path: где купить, узнать цену, подобрать объём","textPreview":"• Нет короткого buy path: где купить, узнать цену, подобрать объём","textChars":66,"textLines":1,"bbox":[752,435,440,49.4]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":5,"text":"• CTA не повторяется после длинного техописания","textPreview":"• CTA не повторяется после длинного техописания","textChars":47,"textLines":1,"bbox":[752,479.1,440,49.4]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":5,"text":"• Мелкий и плотный текст снижает scanability","textPreview":"• Мелкий и плотный текст снижает scanability","textChars":44,"textLines":1,"bbox":[752,523.2,440,49.4]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":5,"bbox":[44,666,1190,28]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":5,"text":"Рекомендация: добавить рядом с карточкой товара компактный коммерческий блок с ценой / дилером / подбором объёма / CTA на консультацию","textPreview":"Рекомендация: добавить рядом с карточкой товара компактный коммерческий блок с ценой / дилером / подбором объёма / CTA на консультацию","textChars":134,"textLines":1,"bbox":[44,618,1190,42]}
+{"kind":"image","id":"im/xobm58z2","slide":5,"name":"","geometry":"roundRect","alt":"Карточка товара Сенеж Аквадекор","bbox":[44,188,650,462]}
+{"kind":"notes","id":"nt/jt5xmn","slide":5,"text":""}
+{"kind":"slide","id":"sl/jdmi46","slide":6,"title":"Формы и доступность","textShapes":17}
+{"kind":"textbox","id":"sh/cj6tovah","slide":6,"text":"Формы и доступность","textPreview":"Формы и доступность","textChars":19,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/nyd0z610","slide":6,"text":"Формы и accessibility не сломаны полностью, но дают важные точки риска","textPreview":"Формы и accessibility не сломаны полностью, но дают важные точки риска","textChars":70,"textLines":1,"bbox":[44,76,730,90]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":6,"bbox":[820,76,414,590]}
+{"kind":"shape","id":"sh/cvixczed","slide":6,"bbox":[44,190,352,196]}
+{"kind":"shape","id":"sh/nap4r65w","slide":6,"bbox":[422,190,352,196]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":6,"bbox":[44,412,352,220]}
+{"kind":"shape","id":"sh/1orytsvu","slide":6,"bbox":[422,412,352,220]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":6,"text":"Формы","textPreview":"Формы","textChars":5,"textLines":1,"bbox":[68,216,120,30]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":6,"text":"• Пустая отправка даёт корректный validation_failed","textPreview":"• Пустая отправка даёт корректный validation_failed","textChars":51,"textLines":1,"bbox":[68,256,280,44.2]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":6,"text":"• Заполненная тестовая отправка упирается в spam/captcha","textPreview":"• Заполненная тестовая отправка упирается в spam/captcha","textChars":56,"textLines":1,"bbox":[68,296.3,280,44.2]}
+{"kind":"textbox","id":"sh/oza1gvy9","slide":6,"text":"• Главная форма слишком тяжёлая для первого контакта","textPreview":"• Главная форма слишком тяжёлая для первого контакта","textChars":52,"textLines":1,"bbox":[68,336.6,280,44.2]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":6,"text":"Клавиатура","textPreview":"Клавиатура","textChars":10,"textLines":1,"bbox":[446,216,150,30]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":6,"text":"• Базовые focus-стили в Bootstrap есть","textPreview":"• Базовые focus-стили в Bootstrap есть","textChars":38,"textLines":1,"bbox":[446,256,290,44.2]}
+{"kind":"textbox","id":"sh/zqtcj6to","slide":6,"text":"• Но у mobile menu trigger нет aria-expanded и aria-controls","textPreview":"• Но у mobile menu trigger нет aria-expanded и aria-controls","textChars":60,"textLines":1,"bbox":[446,296.3,290,44.2]}
+{"kind":"textbox","id":"sh/obm58z25","slide":6,"text":"• На главной нет явного main-landmark","textPreview":"• На главной нет явного main-landmark","textChars":37,"textLines":1,"bbox":[446,336.6,290,44.2]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":6,"text":"Screen reader","textPreview":"Screen reader","textChars":13,"textLines":1,"bbox":[68,438,180,30]}
+{"kind":"textbox","id":"sh/a9w3m94f","slide":6,"text":"• Есть aria-live-области у Contact Form 7","textPreview":"• Есть aria-live-области у Contact Form 7","textChars":41,"textLines":1,"bbox":[68,478,280,44.2]}
+{"kind":"textbox","id":"sh/zupwb2hw","slide":6,"text":"• Но поля форм не связаны устойчиво через label-for + id","textPreview":"• Но поля форм не связаны устойчиво через label-for + id","textChars":56,"textLines":1,"bbox":[68,518.3,280,44.2]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":6,"text":"• Декоративные изображения местами без корректного alt","textPreview":"• Декоративные изображения местами без корректного alt","textChars":54,"textLines":1,"bbox":[68,558.6,280,44.2]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":6,"text":"Контраст","textPreview":"Контраст","textChars":8,"textLines":1,"bbox":[446,438,150,30]}
+{"kind":"textbox","id":"sh/tcj6tova","slide":6,"text":"4.32:1","textPreview":"4.32:1","textChars":6,"textLines":1,"bbox":[446,484,180,60]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":6,"text":"Серый служебный текст на белом фоне не проходит AA для обычного текста","textPreview":"Серый служебный текст на белом фоне не проходит AA для обычного текста","textChars":70,"textLines":1,"bbox":[446,542,280,58]}
+{"kind":"image","id":"im/3itgfmlk","slide":6,"name":"","geometry":"roundRect","alt":"Страница контактов seneg.ru","bbox":[820,76,414,590]}
+{"kind":"notes","id":"nt/jdmi46","slide":6,"text":""}
+{"kind":"slide","id":"sl/0j8xuw","slide":7,"title":"Приоритеты","textShapes":17}
+{"kind":"textbox","id":"sh/gvy90je9","slide":7,"text":"Приоритеты","textPreview":"Приоритеты","textChars":10,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":7,"text":"Исправления лучше делать в порядке влияния на конверсию, а не в порядке косметики","textPreview":"Исправления лучше делать в порядке влияния на конверсию, а не в порядке косметики","textChars":81,"textLines":1,"bbox":[44,76,880,96]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":7,"bbox":[44,206,360,420]}
+{"kind":"shape","id":"sh/94fu18jq","slide":7,"bbox":[430,206,360,420]}
+{"kind":"shape","id":"sh/kjm1cfa9","slide":7,"bbox":[816,206,418,420]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":7,"text":"Сразу","textPreview":"Сразу","textChars":5,"textLines":1,"bbox":[68,236,120,34]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":7,"text":"• Пересобрать mobile layout главной и ключевых шаблонов","textPreview":"• Пересобрать mobile layout главной и ключевых шаблонов","textChars":55,"textLines":1,"bbox":[68,290,290,52]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":7,"text":"• Упростить первый экран и усилить один основной CTA","textPreview":"• Упростить первый экран и усилить один основной CTA","textChars":52,"textLines":1,"bbox":[68,340,290,52]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":7,"text":"• Сделать hero понятным для холодного трафика","textPreview":"• Сделать hero понятным для холодного трафика","textChars":45,"textLines":1,"bbox":[68,390,290,52]}
+{"kind":"textbox","id":"sh/2p8nqxs7","slide":7,"text":"Следующий спринт","textPreview":"Следующий спринт","textChars":16,"textLines":1,"bbox":[454,236,220,34]}
+{"kind":"textbox","id":"sh/ra5gbq1o","slide":7,"text":"• Сократить поля первого контакта","textPreview":"• Сократить поля первого контакта","textChars":33,"textLines":1,"bbox":[454,290,290,49.4]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":7,"text":"• Добавить buy path на карточки товара","textPreview":"• Добавить buy path на карточки товара","textChars":38,"textLines":1,"bbox":[454,336.1,290,49.4]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":7,"text":"• Починить mobile menu accessibility и landmarks","textPreview":"• Починить mobile menu accessibility и landmarks","textChars":48,"textLines":1,"bbox":[454,382.2,290,49.4]}
+{"kind":"textbox","id":"sh/2hwfyxob","slide":7,"text":"• Усилить CTA-повторы на длинных страницах","textPreview":"• Усилить CTA-повторы на длинных страницах","textChars":42,"textLines":1,"bbox":[454,428.3,290,49.4]}
+{"kind":"textbox","id":"sh/r2p8nqxs","slide":7,"text":"Дальше","textPreview":"Дальше","textChars":6,"textLines":1,"bbox":[840,236,120,34]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":7,"text":"• Обновить визуальную систему без потери бренда","textPreview":"• Обновить визуальную систему без потери бренда","textChars":47,"textLines":1,"bbox":[840,290,330,49.4]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":7,"text":"• Привести в порядок alt, labels и контраст","textPreview":"• Привести в порядок alt, labels и контраст","textChars":43,"textLines":1,"bbox":[840,336.1,330,49.4]}
+{"kind":"textbox","id":"sh/25kb6xkf","slide":7,"text":"• Освежить новости, кейсы и маркеры актуальности","textPreview":"• Освежить новости, кейсы и маркеры актуальности","textChars":48,"textLines":1,"bbox":[840,382.2,330,49.4]}
+{"kind":"textbox","id":"sh/rqd4vmtw","slide":7,"text":"• Повысить scanability длинных текстов","textPreview":"• Повысить scanability длинных текстов","textChars":38,"textLines":1,"bbox":[840,428.3,330,49.4]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":7,"text":"Порядок важен: если начать с редизайна кнопок и иконок, эффект будет заметно ниже, чем от mobile-first и пересборки hero.","textPreview":"Порядок важен: если начать с редизайна кнопок и иконок, эффект будет заметно ниже, чем от mobile-first и пересборки hero.","textChars":121,"textLines":1,"bbox":[44,654,1190,36]}
+{"kind":"notes","id":"nt/0j8xuw","slide":7,"text":""}
+{"kind":"slide","id":"sl/cl5au0","slide":8,"title":"Финал","textShapes":11}
+{"kind":"textbox","id":"sh/61032lsz","slide":8,"text":"Финал","textPreview":"Финал","textChars":5,"textLines":1,"bbox":[44,26,260,24]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":8,"text":"Если исправить первые 3 зоны, сайт начнёт лучше конвертировать без полной замены бренда и структуры","textPreview":"Если исправить первые 3 зоны, сайт начнёт лучше конвертировать без полной замены бренда и структуры","textChars":99,"textLines":1,"bbox":[44,90,980,110]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":8,"bbox":[44,256,1190,250]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":8,"text":"Три главных действия","textPreview":"Три главных действия","textChars":20,"textLines":1,"bbox":[68,286,260,34]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":8,"text":"• Починить mobile-first layout главной и товарных шаблонов","textPreview":"• Починить mobile-first layout главной и товарных шаблонов","textChars":58,"textLines":1,"bbox":[68,336,1080,62.4]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":8,"text":"• Собрать первый экран вокруг одного сильного CTA и ясного value proposition","textPreview":"• Собрать первый экран вокруг одного сильного CTA и ясного value proposition","textChars":76,"textLines":1,"bbox":[68,393.6,1080,62.4]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":8,"text":"• Сократить формы и добавить короткий путь к покупке на карточках товара","textPreview":"• Сократить формы и добавить короткий путь к покупке на карточках товара","textChars":72,"textLines":1,"bbox":[68,451.2,1080,62.4]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":8,"text":"Ожидаемый эффект","textPreview":"Ожидаемый эффект","textChars":16,"textLines":1,"bbox":[44,560,250,32]}
+{"kind":"textbox","id":"sh/6hcrmhk3","slide":8,"text":"• Меньше отказов с мобильных устройств","textPreview":"• Меньше отказов с мобильных устройств","textChars":38,"textLines":1,"bbox":[44,600,820,52]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":8,"text":"• Больше первых кликов в коммерчески полезные сценарии","textPreview":"• Больше первых кликов в коммерчески полезные сценарии","textChars":54,"textLines":1,"bbox":[44,648,820,52]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":8,"text":"• Более современное восприятие сильного бренда без тотального rebuild сайта","textPreview":"• Более современное восприятие сильного бренда без тотального rebuild сайта","textChars":75,"textLines":1,"bbox":[44,696,820,52]}
+{"kind":"textbox","id":"sh/ylc7u54z","slide":8,"text":"Материалы в основе deck\nскриншоты сайта\nлокальный UX-аудит\nfollow-up по формам и accessibility","textPreview":"Материалы в основе deck | скриншоты сайта | локальный UX-аудит | follow-up по формам и accessibility","textChars":94,"textLines":4,"bbox":[900,558,300,120]}
+{"kind":"notes","id":"nt/cl5au0","slide":8,"text":""}

@@ -1,0 +1,894 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UX-аудит seneg.ru</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f0ea;
+      --surface: rgba(255, 255, 255, 0.88);
+      --surface-strong: #ffffff;
+      --text: #1f1d1a;
+      --muted: #615c55;
+      --line: rgba(31, 29, 26, 0.14);
+      --accent: #0b5fa5;
+      --accent-2: #133a63;
+      --danger: #c0392b;
+      --warn: #c87400;
+      --ok: #2f7a4e;
+      --shadow: 0 18px 44px rgba(17, 26, 39, 0.12);
+      --radius: 24px;
+      --radius-sm: 16px;
+      --max: 1280px;
+    }
+
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #111315;
+      --surface: rgba(23, 25, 28, 0.88);
+      --surface-strong: #1b1e22;
+      --text: #f4efe6;
+      --muted: #b4ab9f;
+      --line: rgba(244, 239, 230, 0.12);
+      --accent: #74b9ff;
+      --accent-2: #d6e9ff;
+      --danger: #ff7b72;
+      --warn: #ffb454;
+      --ok: #7bd88f;
+      --shadow: 0 18px 44px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(11, 95, 165, 0.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(200, 116, 0, 0.12), transparent 26%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: color-mix(in srgb, var(--bg) 74%, transparent);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #74aee0);
+      color: white;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-copy strong,
+    .brand-copy span {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-copy span {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    button,
+    .button-link {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    button:hover,
+    .button-link:hover,
+    .slide-jump a:hover,
+    .nav-button:hover {
+      transform: translateY(-1px);
+      border-color: color-mix(in srgb, var(--accent) 44%, var(--line));
+    }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+    }
+
+    .deck-intro {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .intro-card,
+    .meta-card,
+    .slide {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .intro-card,
+    .meta-card {
+      padding: 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 0.96;
+      margin-bottom: 18px;
+      max-width: 10ch;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2.4vw, 24px);
+      line-height: 1.35;
+      color: var(--muted);
+      max-width: 40ch;
+      margin-bottom: 0;
+    }
+
+    .score-grid,
+    .stats-grid,
+    .two-col,
+    .three-col,
+    .priority-grid,
+    .evidence-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .score-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 26px;
+    }
+
+    .score-box,
+    .stat,
+    .card,
+    .priority-card,
+    .mini-card {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .score-box strong {
+      display: block;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .score-box span,
+    .stat span,
+    .card p,
+    .priority-card p,
+    .mini-card p,
+    li,
+    figcaption,
+    .caption {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .slides {
+      display: grid;
+      gap: 26px;
+    }
+
+    .slide {
+      padding: 28px;
+      min-height: min(88vh, 920px);
+      scroll-margin-top: 94px;
+      display: grid;
+      align-content: start;
+      gap: 20px;
+    }
+
+    .slide-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+    }
+
+    .slide-kicker {
+      display: block;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .slide-num {
+      font-size: 14px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .slide h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.04;
+      margin-bottom: 0;
+    }
+
+    .slide-subtitle {
+      max-width: 56ch;
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .two-col { grid-template-columns: 1fr 1fr; }
+    .three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .priority-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .evidence-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      width: fit-content;
+      margin-bottom: 12px;
+    }
+
+    .tag-danger { background: rgba(192, 57, 43, 0.12); color: var(--danger); }
+    .tag-warn { background: rgba(200, 116, 0, 0.12); color: var(--warn); }
+    .tag-ok { background: rgba(47, 122, 78, 0.12); color: var(--ok); }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      display: grid;
+      gap: 8px;
+    }
+
+    figure {
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #d9d9d9;
+    }
+
+    .figure-frame {
+      padding: 14px;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.16));
+      border: 1px solid var(--line);
+    }
+
+    .highlight {
+      font-weight: 700;
+      color: var(--accent-2);
+    }
+
+    .quote-box {
+      padding: 18px 20px;
+      border-left: 4px solid var(--accent);
+      background: color-mix(in srgb, var(--accent) 7%, var(--surface-strong));
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .nav-footer {
+      position: sticky;
+      bottom: 12px;
+      z-index: 15;
+      margin-top: 20px;
+    }
+
+    .nav-panel {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .nav-button {
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .slide-jump {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .slide-jump a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      color: var(--text);
+      background: var(--surface-strong);
+      font-size: 14px;
+    }
+
+    .slide-jump a.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .small-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 1024px) {
+      .deck-intro,
+      .evidence-grid,
+      .two-col,
+      .three-col,
+      .priority-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slide {
+        min-height: auto;
+      }
+
+      .nav-shell {
+        border-radius: 28px;
+        padding: 16px;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .topbar-inner,
+      main,
+      .nav-panel {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .toolbar {
+        justify-content: flex-start;
+      }
+
+      .score-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .slide {
+        padding: 20px;
+      }
+
+      .slide-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark">UX</div>
+        <div class="brand-copy">
+          <strong>seneg.ru — аудит и презентация</strong>
+          <span>HTML-версия для демонстрации по ссылке</span>
+        </div>
+      </div>
+      <div class="toolbar">
+        <button id="themeToggle" type="button">Сменить тему</button>
+        <a class="button-link" href="report.md">Отчет</a>
+        <a class="button-link" href="followup-checks.md">Доп. проверки</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="deck-intro">
+      <div class="intro-card">
+        <div class="eyebrow">UX Audit • July 2026</div>
+        <h1>Сайт выглядит надежным, но тормозит первый шаг пользователя</h1>
+        <p class="lead">Главная проблема не в ассортименте, а в перегруженной структуре, слабой мобильной подаче и лишнем трении на пути к заявке.</p>
+        <div class="score-grid">
+          <div class="score-box">
+            <strong>4.8/10</strong>
+            <span>Общая оценка текущего UX</span>
+          </div>
+          <div class="score-box">
+            <strong>1</strong>
+            <span>Критическая проблема</span>
+          </div>
+          <div class="score-box">
+            <strong>5+</strong>
+            <span>Крупных зон для правок</span>
+          </div>
+        </div>
+      </div>
+      <aside class="meta-card">
+        <div class="stats-grid">
+          <div class="stat">
+            <strong>Что проверено</strong>
+            <span>Главная, карточка товара, контакты, формы, screen reader path, клавиатурный путь и контраст.</span>
+          </div>
+          <div class="stat">
+            <strong>Что сработало</strong>
+            <span>Контакты, техинформация по продуктам, базовое доверие через адрес и телефоны.</span>
+          </div>
+          <div class="stat">
+            <strong>Что мешает</strong>
+            <span>Мобильный первый экран, перегруженная навигация, слабый CTA и тяжелые формы.</span>
+          </div>
+          <div class="stat">
+            <strong>Бизнес-смысл</strong>
+            <span>Сайт теряет часть холодного и мобильного трафика еще до коммерческого действия.</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="slides">
+      <section class="slide" id="slide-1">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 1</span>
+            <h2>Итог в одном экране</h2>
+          </div>
+          <div class="slide-num">1 / 8</div>
+        </div>
+        <p class="slide-subtitle">Сильный ассортимент и базовое доверие уже есть, но текущая архитектура и визуальная подача заставляют пользователя разбираться в сайте вместо того, чтобы двигаться к покупке или заявке.</p>
+        <div class="three-col">
+          <div class="card">
+            <div class="tag tag-danger">Критично</div>
+            <h3>Мобильная версия ломает первый экран</h3>
+            <p>На узком экране часть контента выглядит как десктопная раскладка, из-за чего падает читаемость и усложняется первый шаг.</p>
+          </div>
+          <div class="card">
+            <div class="tag tag-warn">Крупно</div>
+            <h3>Нет одного доминирующего CTA</h3>
+            <p>Пользователь видит сразу несколько маршрутов, но не понимает, какой следующий шаг здесь главный.</p>
+          </div>
+          <div class="card">
+            <div class="tag tag-warn">Крупно</div>
+            <h3>Коммерческий путь размывается</h3>
+            <p>На карточке товара много технической информации, но мало быстрых переходов к цене, дилеру или подбору объема.</p>
+          </div>
+        </div>
+        <div class="quote-box">Если коротко: сайт не выглядит пустым или слабым, но выглядит трудным. А трудный интерфейс почти всегда бьет по конверсии раньше, чем по доверию.</div>
+      </section>
+
+      <section class="slide" id="slide-2">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 2</span>
+            <h2>Главная страница перегружает выбор</h2>
+          </div>
+          <div class="slide-num">2 / 8</div>
+        </div>
+        <div class="evidence-grid">
+          <figure class="figure-frame">
+            <img src="01-home-desktop.png" alt="Скриншот главной страницы seneg.ru на десктопе">
+            <figcaption>Пример: первый экран и ближайшие блоки на десктопе.</figcaption>
+          </figure>
+          <div class="card">
+            <div class="tag tag-warn">Major finding</div>
+            <h3>Что видно на скриншоте</h3>
+            <ul>
+              <li>Телефоны, callback, меню, каталог, шорткаты и промоблоки конкурируют между собой.</li>
+              <li>Ценность бренда считывается, но визуально проигрывает второстепенным элементам.</li>
+              <li>CTA мелкий и не задает однозначный следующий шаг.</li>
+            </ul>
+            <p><span class="highlight">Риск:</span> пользователь тратит внимание на навигацию по сайту, а не на движение в нужный сценарий.</p>
+            <p><span class="highlight">Что делать:</span> собрать hero вокруг одного сообщения, одного основного CTA и 1–2 вторичных маршрутов.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-3">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 3</span>
+            <h2>Мобильный экран — самая острая зона</h2>
+          </div>
+          <div class="slide-num">3 / 8</div>
+        </div>
+        <div class="evidence-grid">
+          <figure class="figure-frame">
+            <img src="02-home-mobile-narrow.png" alt="Скриншот мобильной версии главной страницы seneg.ru">
+            <figcaption>Пример: narrow viewport, где сайт сохраняет десктопную логику.</figcaption>
+          </figure>
+          <div class="card">
+            <div class="tag tag-danger">Critical finding</div>
+            <h3>Почему это критично</h3>
+            <ul>
+              <li>Первый экран не адаптирован под современный узкий viewport.</li>
+              <li>Ссылки и блоки выглядят плотными, а точки касания местами слишком мелкие.</li>
+              <li>Пользователь получает ощущение старого и неудобного интерфейса уже в первые секунды.</li>
+            </ul>
+            <p><span class="highlight">Ожидаемый эффект после правки:</span> ниже bounce rate, выше глубина просмотра и конверсия с мобильного трафика.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-4">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 4</span>
+            <h2>Карточка товара не доводит до покупки</h2>
+          </div>
+          <div class="slide-num">4 / 8</div>
+        </div>
+        <div class="evidence-grid">
+          <figure class="figure-frame">
+            <img src="03-product-aquadecor.png" alt="Скриншот страницы продукта Сенеж Аквадекор">
+            <figcaption>Пример: страница продукта с сильной техинформацией, но слабым коммерческим маршрутом.</figcaption>
+          </figure>
+          <div class="card">
+            <div class="tag tag-warn">Major finding</div>
+            <h3>Что теряется</h3>
+            <ul>
+              <li>Есть сертификаты, описание и техподдержка, но нет короткого пути к цене или покупке.</li>
+              <li>Пользователь не видит быстрый сценарий “где купить”, “узнать цену”, “подобрать объем”.</li>
+              <li>По длинной странице CTA не повторяются достаточно системно.</li>
+            </ul>
+            <p><span class="highlight">Что делать:</span> рядом с продуктом добавить коммерческий блок с несколькими понятными действиями, а CTA повторять после ключевых секций.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-5">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 5</span>
+            <h2>Формы, keyboard path и screen reader</h2>
+          </div>
+          <div class="slide-num">5 / 8</div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <div class="tag tag-ok">Что подтвердилось</div>
+            <ul>
+              <li>Серверная валидация форм работает и возвращает ошибки по обязательным полям.</li>
+              <li>Антиспам и captcha активны: headless-отправки режутся как `spam` или уводятся в captcha-сценарий.</li>
+              <li>У Contact Form 7 есть `aria-live`-области для сообщений о состоянии формы.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag tag-danger">Что найдено</div>
+            <ul>
+              <li>У полей формы нет надежной связки `<label for>` и `id`.</li>
+              <li>На главной нет явного `main` landmark.</li>
+              <li>Триггер мобильного меню не имеет `aria-expanded`, `aria-controls` и роли кнопки.</li>
+              <li>Часть декоративных изображений размечена слабо или шумно для screen reader.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="evidence-grid">
+          <figure class="figure-frame">
+            <img src="04-contact-page.png" alt="Скриншот страницы контактов seneg.ru">
+            <figcaption>Страница контактов подтверждает базовое доверие, но не снимает проблемы формы и семантики.</figcaption>
+          </figure>
+          <div class="mini-card">
+            <h3>Контраст</h3>
+            <p>Большая часть ключевых синих и белых элементов проходит AA/AAA, но найден точечный провал: <strong>серый текст `#7b797b` на белом фоне = 4.32:1</strong>, что не проходит AA для обычного текста.</p>
+            <p class="caption">Это не катастрофа для всего сайта, но важный маркер того, что accessibility поддерживается не системно.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-6">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 6</span>
+            <h2>Сигналы устаревания снижают доверие</h2>
+          </div>
+          <div class="slide-num">6 / 8</div>
+        </div>
+        <div class="three-col">
+          <div class="card">
+            <div class="tag tag-warn">Контент</div>
+            <h3>Новости и футер</h3>
+            <p>На главной видны старые новости, а футер выглядит давно не обновленным. Это создает ощущение архивного сайта.</p>
+          </div>
+          <div class="card">
+            <div class="tag tag-warn">Визуальная система</div>
+            <h3>Старые паттерны UI</h3>
+            <p>Градиенты, плашки, разрозненные иконки и плотная структура делают сайт визуально устаревшим, даже если бренд сам по себе силен.</p>
+          </div>
+          <div class="card">
+            <div class="tag tag-ok">Что держит доверие</div>
+            <h3>Контакты и техподтверждения</h3>
+            <p>Адрес, телефоны, карта, документы и технический контент все еще поддерживают базовую уверенность в компании.</p>
+          </div>
+        </div>
+        <div class="quote-box">Здесь проблема не в том, что сайт “сломанный”, а в том, что он визуально подсказывает меньшую актуальность, чем, вероятно, есть у бизнеса на самом деле.</div>
+      </section>
+
+      <section class="slide" id="slide-7">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 7</span>
+            <h2>Приоритеты исправлений</h2>
+          </div>
+          <div class="slide-num">7 / 8</div>
+        </div>
+        <div class="priority-grid">
+          <div class="priority-card">
+            <div class="tag tag-danger">Сразу</div>
+            <h3>Пересобрать mobile layout</h3>
+            <p>Главная и ключевые шаблоны должны нормально работать на мобильном в первом касании.</p>
+          </div>
+          <div class="priority-card">
+            <div class="tag tag-warn">Следующий спринт</div>
+            <h3>Пересобрать hero и CTA hierarchy</h3>
+            <p>Один доминирующий сценарий на главной, меньше конкурирующих блоков, яснее ценность бренда.</p>
+          </div>
+          <div class="priority-card">
+            <div class="tag tag-warn">Следующий спринт</div>
+            <h3>Сократить формы первого контакта</h3>
+            <p>Оставить 2–3 поля на старте и убрать лишнее трение для холодного лида.</p>
+          </div>
+          <div class="priority-card">
+            <div class="tag tag-warn">Следующий спринт</div>
+            <h3>Усилить путь покупки на product page</h3>
+            <p>Добавить блоки “где купить”, “узнать цену”, “подобрать объем”, “скачать инструкцию”.</p>
+          </div>
+          <div class="priority-card">
+            <div class="tag tag-ok">Параллельно</div>
+            <h3>Закрыть accessibility-базу</h3>
+            <p>Явные label/input связи, `main`, нормальный триггер мобильного меню, декоративные `alt=""`.</p>
+          </div>
+          <div class="priority-card">
+            <div class="tag tag-ok">Быстрые победы</div>
+            <h3>Обновить сигналы свежести</h3>
+            <p>Футер, новости, кейсы и общий визуальный слой стоит привести к текущему состоянию бренда.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="slide-8">
+        <div class="slide-head">
+          <div>
+            <span class="slide-kicker">Слайд 8</span>
+            <h2>Что даст наибольший эффект</h2>
+          </div>
+          <div class="slide-num">8 / 8</div>
+        </div>
+        <div class="two-col">
+          <div class="card">
+            <h3>Топ-3 действия</h3>
+            <ul>
+              <li>Починить мобильный first screen и плотность интерфейса.</li>
+              <li>Собрать главную вокруг одного сильного CTA и более чистой иерархии.</li>
+              <li>Сделать товарные страницы коммерчески завершенными, а не только информационными.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ожидаемый результат</h3>
+            <ul>
+              <li>Меньше потерь на мобильном трафике.</li>
+              <li>Более понятный первый шаг для нового пользователя.</li>
+              <li>Выше шанс перевести интерес в заявку, звонок или запрос цены.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mini-card">
+          <h3>Сопроводительные материалы</h3>
+          <p>Полный текст аудита, доказательная база и отдельный блок по формам/accessibility лежат рядом с этой HTML-презентацией. Этот файл можно показывать как самостоятельную демо-страницу в браузере.</p>
+          <p class="small-note">Навигация: кнопки ниже, hash-ссылки на слайды и клавиши ← → на клавиатуре.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="nav-footer">
+    <div class="nav-panel">
+      <div class="nav-shell">
+        <button class="nav-button" id="prevSlide" type="button">Назад</button>
+        <nav class="slide-jump" aria-label="Переход по слайдам">
+          <a href="#slide-1">1</a>
+          <a href="#slide-2">2</a>
+          <a href="#slide-3">3</a>
+          <a href="#slide-4">4</a>
+          <a href="#slide-5">5</a>
+          <a href="#slide-6">6</a>
+          <a href="#slide-7">7</a>
+          <a href="#slide-8">8</a>
+        </nav>
+        <button class="nav-button" id="nextSlide" type="button">Дальше</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var themeToggle = document.getElementById("themeToggle");
+      var slides = Array.from(document.querySelectorAll(".slide"));
+      var jumpLinks = Array.from(document.querySelectorAll(".slide-jump a"));
+      var prevButton = document.getElementById("prevSlide");
+      var nextButton = document.getElementById("nextSlide");
+      var activeIndex = 0;
+
+      function applyTheme(theme) {
+        root.setAttribute("data-theme", theme);
+        localStorage.setItem("seneg-audit-theme", theme);
+      }
+
+      function initTheme() {
+        var saved = localStorage.getItem("seneg-audit-theme");
+        if (saved) {
+          applyTheme(saved);
+          return;
+        }
+        applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      }
+
+      function setActive(index) {
+        activeIndex = Math.max(0, Math.min(index, slides.length - 1));
+        jumpLinks.forEach(function (link, idx) {
+          link.classList.toggle("active", idx === activeIndex);
+        });
+      }
+
+      function slideIndexFromHash() {
+        var hash = window.location.hash;
+        if (!hash) return 0;
+        var idx = slides.findIndex(function (slide) {
+          return "#" + slide.id === hash;
+        });
+        return idx >= 0 ? idx : 0;
+      }
+
+      function goTo(index) {
+        setActive(index);
+        slides[activeIndex].scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", "#" + slides[activeIndex].id);
+      }
+
+      function refreshActiveOnScroll() {
+        var bestIndex = 0;
+        var bestDistance = Number.POSITIVE_INFINITY;
+        slides.forEach(function (slide, idx) {
+          var rect = slide.getBoundingClientRect();
+          var distance = Math.abs(rect.top - 120);
+          if (distance < bestDistance) {
+            bestDistance = distance;
+            bestIndex = idx;
+          }
+        });
+        setActive(bestIndex);
+      }
+
+      themeToggle.addEventListener("click", function () {
+        applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+      });
+
+      prevButton.addEventListener("click", function () { goTo(activeIndex - 1); });
+      nextButton.addEventListener("click", function () { goTo(activeIndex + 1); });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "ArrowLeft") goTo(activeIndex - 1);
+        if (event.key === "ArrowRight") goTo(activeIndex + 1);
+      });
+
+      window.addEventListener("hashchange", function () {
+        setActive(slideIndexFromHash());
+      });
+      window.addEventListener("scroll", refreshActiveOnScroll, { passive: true });
+
+      initTheme();
+      setActive(slideIndexFromHash());
+      refreshActiveOnScroll();
+    })();
+  </script>
+</body>
+</html>
